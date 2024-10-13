@@ -1,0 +1,14 @@
+<%- include('includes/header.ejs') %>
+<main class="container">
+  <h1>
+    <%= pageTitle %>
+  </h1>
+  <form action="/users/add-user/" method="post">
+    <div class="form-control">
+      <label for="userName">User Name</label>
+      <input type="text" name="userName" id="userName">
+    </div>
+    <button class="btn" type="submit">Add User</button>
+  </form>
+</main>
+<%- include('includes/footer.ejs') %>

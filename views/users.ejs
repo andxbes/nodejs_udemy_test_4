@@ -1,0 +1,22 @@
+<%- include('includes/header.ejs') %>
+<main class="container">
+  <h1>
+    <%= pageTitle %>
+  </h1>
+
+  <% if(users.length > 0 ){%>
+  <div class="users">
+    <% for(let user of users){ %>
+    <div class="user">
+      <div class="user__img">
+        <img src="/img/user.svg" width="120" height="120" alt="user img">
+      </div>
+      <div class="user__name"><%= user.userName %></div>
+    </div>
+    <% } %>
+  </div>
+  <% } else {%>
+  <h2>No Users Found!</h2>
+  <% } %>
+</main>
+<%- include('includes/footer.ejs') %>
